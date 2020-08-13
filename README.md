@@ -1,7 +1,7 @@
 # Washington DC Housing- Sales Price prediction
 
 ### INTRODUCTION and Research Question-
-Here, we will take a closer look at Sale Prices, available for Washington D.C. The sales price data for city is provided from from around 1990 to July, 2018.
+Here, we will take a closer look at Sale Prices, available for Washington D.C, provided from around 1990 to July, 2018.
 After looking through the data, I arrived at a research question for one topic of interest i.e., Predicting Sale Prices for Washington D.C city. 
 
 ### Data Manipulation and Cleaning-

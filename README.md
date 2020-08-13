@@ -29,16 +29,16 @@ And the remaining categorical features via One Hot Encoding.
 #### Outliers in Continuous features-
 From the graphs below, it can be seen that all continuous features have outliers. Outliers can be a problem for linear model performance. But, since they do not effect tree based models, thus, I haven’t did any preprocessing on them.
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/1_Boxplot_cont.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/1_Boxplot_cont.PNG)
 
 #### Skewness of Continuous features-
 Few of the features are skewed, as can be seen from the below plots-
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/2_Skewness_continuous_features.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/2_Skewness_continuous_features.PNG)
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/3_skewness_cont.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/3_skewness_cont.PNG)
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/4_skew.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/4_skew.PNG)
 
 To reduce some of the skewness of these features, I did Log transformation on these features.
 
@@ -46,27 +46,27 @@ To reduce some of the skewness of these features, I did Log transformation on th
 
 As can be seen from the below plots and description, that ‘PRICE’ feature also has right skewness in data.-
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/5_price_skew.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/5_price_skew.PNG)
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/6_price.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/6_price.PNG)
 
 As max PRICE is quite far away from the other quartiles of data.
 In order to reduce skewness, used InterQuantileRange (IQR), to calculate upper and lower boundary, and used upper boundary (1560000.0), to reduce skewness of data, which is somewhat reduced too, as can be seen in below plot-
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/7_price_unskewed.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/7_price_unskewed.PNG)
 
 ### Data Exploration-
 
 #### Spearman Correlation's Heatmap-
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/heatmap_spearman.png)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/heatmap_spearman.png)
 
 
 Fig.5. Spearman Correlation of Continuous Features via Heatmap(to detect non-linear trend in data)
 
 #### Pairplot-
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/9_pairplot.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/9_pairplot.PNG)
 
 It can be seen from the above plot, that Rooms and Bathrooms, Landarea and GBA  both of them have some kind of linear relationship.
 
@@ -74,7 +74,7 @@ It can be seen from the above plot, that Rooms and Bathrooms, Landarea and GBA  
 
 There came around 163 features after doing data manipulation (i.e, encoding on categorical columns) on dataset. Performed Feature Selection, using ExtraTreesRegressor of RandomForest. Took threshold of around 0.01, and got just 27 features, to select columns contributing to the target (‘PRICE’) column.
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/10_Feature_Selection.png)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/10_Feature_Selection.png)
 
 
 
@@ -82,7 +82,7 @@ Fig.7. Visualizing important features, via Feature Selection
 
 As can be seen from the above plot, following features contributes most (in decreasing order) to the target (‘PRICE’)-
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/11_features_dist.PNG)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/11_features_dist.PNG)
 
 
 
@@ -100,7 +100,7 @@ Performed MAE (Mean Absolute Error) and RMSE (Root Mean Squared Error).
 
 #### Data Analysis-
 
-![alt text](https://github.com/rickhagwal/Washingtondc_housing_price_prediction/blob/master/images/12_metric.png)
+![alt text](https://github.com/rickhagwal/WashingtonDC_sales_price_predict/blob/master/images/12_metric.png)
 
 
 
